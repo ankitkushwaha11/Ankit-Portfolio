@@ -1,0 +1,722 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap");
+
+:root {
+  --primary-color: #f87930;
+  --primary-color-dark: #f87930;
+  --secondary-color: #ca8a04;
+  --text-dark: #1f2937;
+  --text-light: #6b7280;
+  --extra-light: #faf5ff;
+  --max-width: 1200px;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+/* scroll-to-top */
+
+#scrollToTopBtn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 50px;
+  height: 50px;
+  background-color:var(--primary-color);
+  color: white;
+  border: none;
+  border-radius: 50%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  cursor: pointer;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: 1;
+}
+
+#scrollToTopBtn:hover {
+  background-color:darkorange;
+}
+
+#scrollToTopBtn.show {
+  opacity: 1;
+}
+
+/* scroll-to-top */
+
+
+/* circular-nav-menu */
+
+.circular-container {
+  position: fixed; /* Fix the position to ensure it doesn't move with page scroll */
+  bottom: 20px;
+  left: 20px; /* Position on the left side */
+  z-index: 1000; /* Ensure it stays on top of other content */
+}
+
+.circular-nav-button {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: darkorange;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-size: 24px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: background 0.3s ease;
+  z-index: 2; /* Ensure the button is on top */
+}
+
+.circular-nav-button:hover {
+  background: rgb(252, 161, 51);
+}
+
+.circular-nav-menu {
+  position: absolute;
+  bottom: 60px; /* Position it below the button */
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  opacity: 0;
+  transform: scale(0);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  z-index: 1; /* Ensure the menu is below the button */
+}
+
+.circular-nav-menu.show {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.circular-nav-item {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: var(--primary-color);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 10px 0;
+  text-decoration: none;
+  font-size: 24px; /* Adjust size as needed */
+  transition: background 0.3s ease;
+}
+
+.circular-nav-item:hover {
+  background:var(--primary-color-dark);
+}
+/* circular-nav-menu */
+
+/* loading bar */
+
+/* loading bar */
+
+nav {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color:rgb(7, 2, 2);
+  z-index: 999;
+}
+
+.nav__content {
+  max-width: var(--max-width);
+  margin: auto;
+  padding: 1.5rem 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+nav .logo a {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #faf5ff;
+  transition: 0.3s;
+}
+
+
+nav .checkbox {
+  display: none;
+}
+
+nav input {
+  display: none;
+}
+nav .checkbox i {
+  font-size: 2rem;
+  color: #fff;
+  cursor: pointer;
+}
+
+ul {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  list-style: none;
+  transition: left 0.3s;
+}
+
+ul li a {
+  padding: 0.5rem 1rem;
+  text-decoration: none;
+  font-weight: 600;
+  color:#fff;
+  transition: 0.3s;
+}
+
+ul li a:hover {
+ 
+  color:var(--primary-color)
+}
+
+.section {
+  background-color:rgb(31, 29, 29);
+}
+
+.section__container {
+  min-height: 900px;
+  max-width: var(--max-width);
+  margin: auto;
+  padding: 1rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 4rem;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.subtitle {
+  letter-spacing: 2px;
+  color: #fff;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.title {
+  font-size: 2.5rem;
+  font-weight: 400;
+  line-height: 3rem;
+  color: #fff;
+  margin-bottom: 1rem;
+}
+
+.title span {
+  font-weight: 600;
+}
+
+.description {
+  line-height: 1.5rem;
+  color:#ffffff;
+  margin-bottom: 2rem;
+}
+
+.action__btns {
+  display: flex;
+  gap: 1rem;
+}
+
+.action__btns button {
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: 2px;
+  padding: 1rem 2rem;
+  outline: none;
+  border: 2px solid transparent;
+  border-radius: 10px;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.hire__me {
+  background-color: var(--primary-color);
+  color: #ffffff;
+}
+
+.hire__me:hover {
+  background-color: var(--primary-color-dark);
+}
+
+.portfolio {
+  color:black
+}
+
+.portfolio:hover {
+  background-color: var(--primary-color-dark);
+  color: #fff;
+}
+
+.image {
+  display: grid;
+  place-items: center;
+}
+
+.image img {
+  width: min(25rem, 90%);
+  border-radius: 100%;
+}
+
+@media (width < 750px) {
+  nav .checkbox {
+    display: block;
+  }
+  nav{
+
+    background-color:var(--primary-color)
+  }
+
+  ul {
+    position: absolute;
+    width: 100%;
+    height: calc(100vh - 85px);
+    left: -100%;
+    top: 85px;
+    background-color: rgb(31, 29, 29);
+    flex-direction: column;
+    justify-content: center;
+    gap: 3rem;
+  }
+
+  nav #check:checked ~ ul {
+    left: 0;
+  }
+
+  ul li a {
+    font-size: 1.25rem;
+  }
+
+  .section__container {
+    padding: 10rem 1rem 5rem 1rem;
+    text-align: center;
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .image {
+    grid-area: 1/1/2/2;
+  }
+
+  .action__btns {
+    margin: auto;
+  }
+}
+
+/* skil-section-starts */
+
+#my-skills {
+  padding: 20px;
+  text-align: center;
+  background: rgb(31, 29, 29);
+  color: #fff;
+}
+
+#my-skills h1 {
+  margin-bottom: 10px; /* Adjust spacing */
+  font-size: 2rem;
+  position: relative;
+  display: inline-block; /* Ensure border is only below the text */
+}
+
+
+
+.skills-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 15px;
+}
+
+.skill {
+  flex: 1 1 calc(33.333% - 40px);
+  max-width: calc(33.333% - 40px);
+  box-sizing: border-box;
+  text-align: center;
+}
+
+.skill img {
+  width: 80px;  /* Adjust size for the logo */
+  height: 80px; /* Adjust size for the logo */
+  border-radius: 50%; /* Make the logo circular */
+  margin-bottom: 10px;
+  object-fit: cover; /* Ensure the logo maintains its aspect ratio */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for hover effects */
+}
+
+.skill img:hover {
+  transform: scale(1.1); /* Slightly enlarge the logo on hover */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add shadow effect on hover */
+}
+
+.skill p {
+  font-size: 1rem;
+  margin: 0;
+}
+
+
+/* For tablets, show 2 by 2 layout */
+@media (max-width: 768px) {
+  .skill {
+      flex: 1 1 calc(50% - 20px); /* Adjust for 2 by 2 layout */
+      max-width: calc(50% - 20px);
+  }
+}
+
+/* For mobile, show 2 by 2 layout */
+@media (max-width: 480px) {
+  .skill {
+      flex: 1 1 calc(50% - 20px); /* Same 2 by 2 layout for mobile */
+      max-width: calc(50% - 20px);
+  }
+}
+
+/* skill-section-ends */
+
+/* project-section-starts */
+
+/* Project Section */
+.project-section {
+  padding: 50px 20px;
+  text-align: center;
+  background: rgb(31, 29, 29);
+}
+
+.project-section h2 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.project-section h2 span {
+  color: #fff;
+}
+
+.project-section p {
+  font-size: 1rem;
+  margin-bottom: 30px;
+}
+
+.projects-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.project-item {
+  position: relative;
+}
+
+.project-item img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.view-details {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 1.5rem;
+  background-color: rgba(0, 0, 0, 0.7);
+  padding: 0px 13px;
+  border-radius: 5px;
+  opacity: 0;
+  transition: opacity 0.5s, transform 0.5s;
+}
+
+.project-item.show-popup .view-details {
+  opacity: 1;
+  transform: translate(-50%, -50%) scale(1.1);
+}
+
+
+/* Modal Styling */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 100;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  background-color: white;
+  padding: 20px;
+  width: 80%;
+  max-width: 800px;
+  margin: auto;
+  border-radius: 8px;
+  position: relative;
+}
+
+.close {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.modal h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.modal p {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+}
+
+.technologies {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 20px;
+}
+
+.technologies img {
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+.modal-links {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.modal-links .live-link img,
+.modal-links .github-link img {
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+}
+
+.modal-links .live-link img:hover,
+.modal-links .github-link img:hover {
+  transform: scale(1.1);
+  transition: transform 0.3s;
+}
+
+
+/* project-section-ends */
+
+/* contact-section-starts */
+
+.my-container {
+  max-width: 1200px;  /* Adjust the maximum width according to your design */
+  margin: 0 auto;     /* Centers the container */
+  padding: 0 20px;    /* Adds padding to avoid content touching screen edges */
+}
+
+.contact-section{
+
+  padding: 20px;
+  background:rgb(31, 29, 29);
+}
+/* Social Media Icons Styling (PNG) */
+.social-icons {
+  margin-top: 20px;
+  display: flex;
+  gap: 15px; /* Space between icons */
+}
+
+.social-icons a {
+  display: inline-block;
+  width: 60px;           /* Size of the circular container */
+  height: 60px;
+  background-color: #333; /* Background color for circle */
+  border-radius: 50%;     /* Make container circular */
+  overflow: hidden;       /* Ensure the image stays inside the circle */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Shadow for effect */
+}
+
+.social-icon {
+  width: 100%;           /* Make the icon fill the container */
+  height: 100%;
+  object-fit: cover;      /* Ensure the image covers the entire circle */
+}
+
+.social-icons a:hover {
+  transform: scale(1.1);  /* Slight zoom on hover */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
+}
+
+
+/* Contact Section */
+.contact-section {
+  padding: 50px 0;
+}
+
+.contact-heading {
+  text-align: center;
+  margin-bottom: 40px;
+  color: #ffffff;
+}
+
+.contact-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;  /* Make it responsive for smaller screens */
+  color: #ffffff;
+}
+
+.contact-info, .contact-form {
+  flex: 1 1 45%; /* Each takes up 45% of width on larger screens */
+  margin: 10px;
+}
+
+.contact-info .info-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.contact-info .info-item img.icon {
+  width: 24px;
+  height: 24px;
+  margin-right: 10px;
+}
+
+.contact-form input, .contact-form textarea {
+  width: 100%;
+  margin-bottom: 20px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.contact-form button {
+  padding: 15px 23px;
+  border: none;
+  background-color: #f87930;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.contact-form button:hover {
+  background-color: #f58748;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .contact-container {
+      flex-direction: column;
+      align-items: center;
+  }
+
+  .contact-info, .contact-form {
+      flex: 1 1 100%;
+      max-width: 100%;
+  }
+}
+
+/* contact-setcion-ends */
+
+
+/* footer-section-starts */
+.footer {
+  background-color: rgb(31, 29, 29); /* Light Black Background */
+  text-align: center;
+  padding: 40px 20px;
+  margin-top: auto;
+  box-shadow: 0 -5px 15px rgba(0, 0, 0, 0.4);
+  color: white;
+}
+
+.creator-details h3 {
+  font-size: 20px;
+  margin-bottom: 5px;
+  color: #ffffff;
+}
+
+.creator-details p {
+  font-size: 16px;
+  color: #a9a9a9;
+}
+
+.about-user {
+  margin: 20px 0;
+  font-size: 15px;
+  color: #dcdcdc;
+}
+
+.my-footer-social a {
+  display: inline-block;
+  margin: 0 15px;
+  font-size: 22px;
+  color: white;
+  text-decoration: none;
+  transition: color 0.3s, transform 0.3s;
+}
+
+.my-footer-social a:hover {
+  color: var(--primary-color); /* Light Blue Hover Color */
+  transform: scale(1.1);
+}
+
+.copyright {
+  font-size: 14px;
+  margin-top: 20px;
+  color: #b0b0b0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .footer {
+    padding: 20px 10px;
+  }
+
+  .creator-details h3 {
+    font-size: 20px;
+  }
+
+  .about-user {
+    font-size: 14px;
+  }
+
+  .my-footer-social a {
+    font-size: 20px;
+    margin: 0 10px;
+  }
+}
+/* footer-section-ends */
+/* Preloader Styles */
+

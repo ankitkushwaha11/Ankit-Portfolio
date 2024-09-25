@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/emailjs-com@2.6.4/dist/email.min.js"></script>
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+    <title>Ankit Portfolio</title>
+  </head>
+  <body>
+    <!-- scroll-to-top -->
+    <button id="scrollToTopBtn" title="Go to Top">↑</button>
+    <!-- scroll-to-top -->
+
+    <!-- nav-section-starts -->
+    <nav>
+      <div class="nav__content">
+        <div class="logo"><a href="#">Ankit</a></div>
+        <label for="check" class="checkbox">
+          <i class="ri-menu-line"></i>
+        </label>
+        <input type="checkbox" name="check" id="check" />
+        <ul>
+          <li><a href="#about">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#my-skills">Skills</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+    <!-- nav-section-ends -->
+
+    <!-- about-section-starts -->
+    <section class="section" id="about">
+      <div class="section__container">
+        <div class="content">
+          <p class="subtitle">HELLO</p>
+          <h1 class="title">
+            I'm <span style="color: #f87930;">Ankit<br/></span>a Web <span style="color: #f87930;">Developer</span>
+          </h1>
+          <p class="description">
+            Hi, I'm Ankit, a passionate and dedicated web developer with a strong focus on creating responsive, user-friendly websites and web applications. I specialize in front-end technologies such as HTML, CSS, JavaScript, and React.
+          </p>
+          <div class="action__btns">
+            <button class="hire__me">Resume</button>
+            <button class="portfolio">Portfolio</button>
+          </div>
+        </div>
+        <div class="image">
+          <img src="/images/profile.jpg" alt="profile" />
+        </div>
+      </div>
+    </section>
+<!-- about-section-ends -->
+
+
+    <!-- skill-section-starts -->
+    <section id="my-skills">
+      <h1>SKILLS</h1>
+      <p class="projects-description">I am a frontend developer skilled in HTML, CSS, JavaScript, and React, focused on building responsive and dynamic web applications</p>
+      <div class="skills-grid">
+          <div class="skill">
+              <img src="/images/htmllogo.png" alt="HTML5">
+              <p>HTML</p>
+          </div>
+          <div class="skill">
+              <img src="/images/csslogo.png" alt="CSS3">
+              <p>CSS</p>
+          </div>
+          
+          <div class="skill">
+              <img src="/images/javascriptlogo.png" alt="JavaScript">
+              <p>JavaScript</p>
+          </div>
+          <div class="skill">
+              <img src="/images/reactlogo.png" alt="React">
+              <p>React</p>
+          </div>
+          
+      </div>
+  </section>
+ <!-- skill-section-ends -->
+
+ <!-- project-section-starts -->
+
+ <section class="project-section" id="projects">
+  <h2 style="color: #fff;">My <span>Projects</span></h2>
+  <p style="color: #fff;">Here are some of the projects I've worked on. Take a look at the images below.</p>
+
+  <div class="projects-container">
+    <!-- Project 1 -->
+    <div class="project-item">
+      <img src="/images/backgroundchange.png" alt="Project 1">
+      <div class="view-details" onclick="openModal('modal1')">View Details</div>
+    </div>
+    <!-- Modal for Project 1 -->
+    <div id="modal1" class="modal">
+      <div class="modal-content">
+        <span class="close" onclick="closeModal('modal1')">&times;</span>
+        <h2>Background Changer</h2>
+        <p>project allows users to click a button then webpage change its background color according to click button in real-time.</p>
+        <h3>What Technology Was Used:</h3>
+        <div class="technologies">
+          <img src="/images/htmlproject.webp" alt="HTML">
+          <img src="/images/cssproject.png" alt="CSS">
+          <img src="/images/javascriptproject.png" alt="JavaScript">
+        </div>
+        <div class="modal-links">
+          <a href="https://splendorous-bubblegum-4f4637.netlify.app/" target="_blank" class="live-link">
+            <img src="/images/gotolink.png" alt="Go to Live Link">
+          </a>
+          <a href="https://github.com/ankitkushwaha11/DOM-Project-1" target="_blank" class="github-link">
+            <img src="/images/githubproject.svg" alt="GitHub Link">
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Project 2 -->
+    <div class="project-item">
+      <img src="/images/friendrequest.jpg" alt="Project 2">
+      <div class="view-details" onclick="openModal('modal2')">View Details</div>
+    </div>
+    <!-- Modal for Project 2 -->
+    <div id="modal2" class="modal">
+      <div class="modal-content">
+        <span class="close" onclick="closeModal('modal2')">&times;</span>
+        <h2>Friend Request</h2>
+        <p>This DOM project allows users to toggle between "Stranger" and "Friend" using a card layout. Each card has an image, a "Stranger" heading, and an "Add Friend" button.</p>
+        <h3>What Technology Was Used:</h3>
+        <div class="technologies">
+          <img src="/images/htmlproject.webp" alt="HTML">
+          <img src="/images/cssproject.png" alt="CSS">
+          <img src="/images/javascriptproject.png" alt="JavaScript">
+        </div>
+        <div class="modal-links">
+          <a href="https://tranquil-ganache-4d00a5.netlify.app/" target="_blank" class="live-link">
+            <img src="/images/gotolink.png" alt="Go to Live Link">
+          </a>
+          <a href="https://github.com/ankitkushwaha11/DOM-Project2" target="_blank" class="github-link">
+            <img src="/images/githubproject.svg" alt="GitHub Link">
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Project 3 -->
+    <div class="project-item">
+      <img src="/images/BMI CALCULATOR (1).jpg" alt="Project 3">
+      <div class="view-details" onclick="openModal('modal3')">View Details</div>
+    </div>
+    <!-- Modal for Project 3 -->
+    <div id="modal3" class="modal">
+      <div class="modal-content">
+        <span class="close" onclick="closeModal('modal3')">&times;</span>
+        <h2>BMI CALCULATOR</h2>
+        <p>The DOM-based BMI calculator is a mobile-responsive tool built using HTML, CSS,and JavaScript.</p>
+        <h3>What Technology Was Used:</h3>
+        <div class="technologies">
+          <img src="/images/htmlproject.webp" alt="HTML">
+          <img src="/images/cssproject.png" alt="CSS">
+          <img src="/images/javascriptproject.png" alt="JavaScript">
+        </div>
+        <div class="modal-links">
+          <a href="https://stirring-lollipop-7c7eb0.netlify.app/" target="_blank" class="live-link">
+            <img src="/images/gotolink.png" alt="Go to Live Link">
+          </a>
+          <a href="https://github.com/ankitkushwaha11/BMI-CALCULATOR" target="_blank" class="github-link">
+            <img src="/images/githubproject.svg" alt="GitHub Link">
+          </a>
+        </div>
+      </div>
+    </div>
+
+     <!-- Project 4 -->
+     <div class="project-item">
+      <img src="/images/recipezone.png" alt="Project 4">
+      <div class="view-details" onclick="openModal('modal4')">View Details</div>
+    </div>
+    <!-- Modal for Project 4 -->
+    <div id="modal4" class="modal">
+      <div class="modal-content">
+        <span class="close" onclick="closeModal('modal4')">&times;</span>
+        <h2>Recipe Website</h2>
+        <p>This site is built with only HTML and CSS,offering a simple,elegant design.At the top,you'll find a navbar for easy navigation.</p>
+        <h3>What Technology Was Used:</h3>
+        <div class="technologies">
+          <img src="/images/htmlproject.webp" alt="HTML">
+          <img src="/images/cssproject.png" alt="CSS">
+          
+        </div>
+        <div class="modal-links">
+          <a href="https://livelink4.com" target="_blank" class="live-link">
+            <img src="/images/gotolink.png" alt="Go to Live Link">
+          </a>
+          <a href="https://github.com/ankitkushwaha11/RecipeZone" target="_blank" class="github-link">
+            <img src="/images/githubproject.svg" alt="GitHub Link">
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Project 5 -->
+    <div class="project-item">
+      <img src="/images/foodyum.png" alt="Project 5">
+      <div class="view-details" onclick="openModal('modal5')">View Details</div>
+    </div>
+    <!-- Modal for Project 5 -->
+    <div id="modal5" class="modal">
+      <div class="modal-content">
+        <span class="close" onclick="closeModal('modal5')">&times;</span>
+        <h2>Food Website</h2>
+        <p> Food Yum where we bring you a unique dining experience with fresh,flavorful dishes crafted with passion.Explore our popular dishes</p>
+        <h3>What Technology Was Used:</h3>
+        <div class="technologies">
+          <img src="/images/htmlproject.webp" alt="HTML">
+          <img src="/images/cssproject.png" alt="CSS">
+         
+        </div>
+        <div class="modal-links">
+          <a href="https://livelink5.com" target="_blank" class="live-link">
+            <img src="/images/gotolink.png" alt="Go to Live Link">
+          </a>
+          <a href="https://github.com/ankitkushwaha11/FoodYum" target="_blank" class="github-link">
+            <img src="/images/githubproject.svg" alt="GitHub Link">
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+  <!-- project-section-ends -->
+
+  <!-- contact-section-starts -->
+  <section class="contact-section" id="contact">
+    <div class="my-container">
+        <div class="contact-heading">
+            <h1>Contact Us</h1>
+            <p>We’d love to hear from you! Fill in the form or use the contact details below to reach out to us.</p>
+        </div>
+        <div class="contact-container">
+            <!-- Contact Information -->
+            <div class="contact-info">
+                <div class="info-item">
+                    <img src="/images/location.jpg" alt="Location" class="icon">
+                    <p>452010 Vijay Nagar, Indore, India</p>
+                </div>
+                <div class="info-item">
+                    <img src="/images/phone.jpg" alt="Phone" class="icon">
+                    <p>+91 9009856002</p>
+                </div>
+                <div class="info-item">
+                    <img src="/images/mail.jpg" alt="Email" class="icon">
+                    <p>kuldeepkushwhaha765@gmail.com</p>
+                </div>
+
+                <!-- Social Media Icons (PNG) -->
+                <div class="social-icons">
+                    <a href="https://github.com/ankitkushwaha11" target="_blank"><img src="images/githubproject.svg" alt="github" class="social-icon"></a>
+                    <a href="https://bit.ly/4d18CPl" target="_blank"><img src="images/linkedin.webp" alt="LinkedIn" class="social-icon"></a>
+                    <a href="https://bit.ly/3TN22p9" target="_blank"><img src="images/instagram.webp" alt="Instagram" class="social-icon"></a>
+                </div>
+            </div>
+
+            <!-- Contact Form -->
+            <div class="contact-form">
+                <form id="contact-form">
+                    <input type="text" name="user_name" placeholder="Your Name" required>
+                    <input type="email" name="user_email" placeholder="Your Email" required>
+                    <input type="text" name="subject" placeholder="Subject" required>
+                    <textarea name="message" placeholder="Your Message" required rows="9" cols="90"></textarea>
+                    <button type="submit">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- contact-section-ends -->
+
+<!-- footer-section-starts -->
+<footer class="footer">
+  <!-- Website Creator Details -->
+  <div class="creator-details">
+    <h3>Website Created Ankit Kushwaha</h3>
+    <p style="color: #f87930;">Front-end Developer</p>
+  </div>
+
+  <!-- About User -->
+  <div class="about-user">
+    <p>A front-end developer builds responsive, visually appealing websites, ensuring smooth functionality, seamless navigation, and optimized performance across all devices.</p>
+  </div>
+
+  <!-- Social Media Icons -->
+  <div class="my-footer-social">
+    <a href="https://github.com/ankitkushwaha11"><i class="fab fa-github"></i></a>
+    <a href="https://bit.ly/3TN22p9"><i class="fab fa-instagram"></i></a>
+    <a href="https://bit.ly/4d18CPl"><i class="fab fa-linkedin-in"></i></a>
+  </div>
+
+  <!-- Copyright -->
+  <div class="copyright">
+    <p>&copy; 2024 Ankit. All rights reserved.</p>
+  </div>
+</footer>
+
+ <!-- footer-section-ends -->
+
+
+
+<!-- circular-nav-menu -->
+
+<div class="circular-container">
+  <div class="circular-nav-container">
+      <div class="circular-nav-button" id="circular-navButton">
+          <span>+</span>
+      </div>
+      <div class="circular-nav-menu" id="circular-navMenu">
+          <a href="#about" class="circular-nav-item" id="home"><i class="fas fa-home"></i></a>
+          <a href="#about" class="circular-nav-item" id="about"><i class="fas fa-user"></i></a>
+          <a href="#my-skills" class="circular-nav-item" id="services"><i class="fas fa-concierge-bell"></i></a>
+          <a href="#contact" class="circular-nav-item" id="contact"><i class="fas fa-envelope"></i></a>
+          <a href="#projects" class="circular-nav-item" id="portfolio"><i class="fas fa-briefcase"></i></a>
+      </div>
+  </div>
+</div>
+ <!-- circular-nav-menu -->
+
+ <!-- loading bar -->
+
+ 
+
+  
+  <!-- loading bar -->
+
+     <script src="script.js"></script>
+
+  </body>
+</html>
